@@ -166,7 +166,8 @@
 							<div class="col-sm-10">
 							      <input type="text" name="txtID" id="txtID" class="form-control" placeholder="Product ID" value="<?php if(isset($id)) echo $id?>"/>
 							</div>
-                
+				</div>
+				
 				<div class="form-group"> 
 					<label for="txtTen" class="col-sm-2 control-label">Product Name(*):  </label>
 							<div class="col-sm-10">
@@ -236,10 +237,10 @@
                         
 				<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
-						      <input type="submit"  class="site-btn" name="btnAdd" id="btnAdd" value="Add" onclick="window.location='?page=pm'" />
-                              <input type="button" class="site-btn" name="btnIgnore"  id="btnIgnore" value="Ignore" onclick="window.location='?page=pm'" />
+						      <input style="background-color: #3CC032;"type="submit"  class="site-btn" name="btnAdd" id="btnAdd" value="Add new"/>
+                              <input type="button" class="site-btn" name="btnIgnore"  id="btnIgnore" value="Ignore" onclick="window.location='?page=branch'" />
                               	
 						</div>
-				</div>
+					</div>
 			</form>
 </div>
