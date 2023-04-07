@@ -205,6 +205,7 @@
 							      <?php bind_shop_List($conn); ?>
 							</div>
                 </div> 
+				
 				<div class="form-group">   
                     <label for="" class="col-sm-2 control-label">Supplier(*):  </label>
 							<div class="col-sm-10">
@@ -214,7 +215,7 @@
                 </div> 
 				       
                 <div class="form-group">   
-                    <label for="lblDetail" class="col-sm-2 control-label">Detail Description(*):  </label>
+                    <label for="" class="col-sm-2 control-label">Detail Description(*):  </label>
 							<div class="col-sm-10">
 							      <textarea type="text" name="txtDetail" id="txtDetail" class="form-control" style="height: 150px" row="4" value=""></textarea>
 							</div>
@@ -238,8 +239,7 @@
 				<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
 						      <input style="background-color: #3CC032;"type="submit"  class="site-btn" name="btnAdd" id="btnAdd" value="Add new"/>
-                              <input type="button" class="site-btn" name="btnIgnore"  id="btnIgnore" value="Ignore" onclick="window.location='?page=branch'" />
-                              	
+                              <input type="button" class="site-btn" name="btnIgnore"  id="btnIgnore" value="Ignore" onclick="window.location='?page=branch'" />     	
 						</div>
 					</div>
 			</form>
