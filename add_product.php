@@ -130,7 +130,7 @@
 			echo $pic['type'];
 			echo $pic['size'];
 			// if($pic['type']=="image/jpg"||$pic['type']=="image/jpeg"||$pic['type']=="image/png" ||$pic['type']=="image/gif"){
-				if($pic['size']<=614400){
+				// if($pic['size']<=614400){
 					$sq="SELECT * from product where product_id='$id'or product_name='$proname'";
                     $result= pg_query($conn,$sq);
                     echo $result;
@@ -154,7 +154,7 @@
 					else {
 						echo"<li>Duplicate product ID or Name</li>";
 					}
-				}
+				// }
             // }
             // else
             // {
