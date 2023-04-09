@@ -79,7 +79,7 @@
 	function bind_shop_List($conn){
 		$sqlstring ="SELECT shop_id, shop_name from shop";
 		$result= pg_query($conn, $sqlstring);
-		echo"<SELECT name ='ahopList'class='form-control '
+		echo"<SELECT name ='shopList' class='form-control'
 			<option value='0'>Choose shop</option>";
 			while($row = pg_fetch_array($result, NULL, PGSQL_ASSOC)){
 				echo"<OPTION value='".$row['shop_id']."'>".$row['shop_name']. "</option>";
@@ -89,7 +89,7 @@
 	function bind_Supplier_List($conn){
 		$sqlstring ="SELECT supplierid, suppliername from supplier";
 		$result= pg_query($conn, $sqlstring);
-		echo"<SELECT name ='SupplierList'class='form-control '
+		echo"<SELECT name ='SupplierList' class='form-control'
 			<option value='0'>Choose shop</option>";
 			while($row = pg_fetch_array($result, NULL, PGSQL_ASSOC)){
 				echo"<OPTION value='".$row['supplierid']."'>".$row['suppliername']. "</option>";
@@ -141,7 +141,8 @@
 						$filePic =$pic['name'];
 						$sqlstring="INSERT INTO product(
 							product_id, product_name, price, smalldesc, detaildesc, prodate, pro_qty, pro_image, cat_id, shop_id,supplierid)
-							VALUES('$id','$proname', $price,'$short','$detail','".date('Y-m-d H:i:s')."',$qty,'$filePic','$category', $shoplist,$supplierlist)";
+							VALUES('$id','$proname', $price,'$short','$detail','".date('Y-m-d H:i:s')."',
+							$qty,'$filePic','$category', $shoplist,$supplierlist)";
 							
 						$re = pg_query($conn, $sqlstring);
 							if(!$re){
