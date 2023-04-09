@@ -129,11 +129,12 @@
 		else{
 			echo $pic['type'];
 			echo $pic['size'];
+			echo "<br>";
 			// if($pic['type']=="image/jpg"||$pic['type']=="image/jpeg"||$pic['type']=="image/png" ||$pic['type']=="image/gif"){
 				// if($pic['size']<=614400){
-					$sq="SELECT * from product where product_id='$id'or product_name='$proname'";
+					$sq="SELECT * from product where product_id='$id'";
                     $result= pg_query($conn,$sq);
-                    echo $result;
+                    echo pg_num_rows($result);
 					if(pg_num_rows($result)==0)
 					{
 						copy($pic['tmp_name'],"ATNtoy/".$pic['name']);
