@@ -76,7 +76,6 @@
 			$row = pg_fetch_array($result, NULL, PGSQL_ASSOC);
 			$cat_id = $row['cat_id'];
 			$cat_name = $row['cat_name'];
-			$cat_des = $row['cat_des'];
 	?>
 <div class="container">
 	<h2>Updating Product Category</h2>
@@ -112,7 +111,6 @@
 		{
 			$id = $_POST['txtID'];
 			$name = $_POST['txtName'];
-			$des = $_POST['txtDes'];
 			$err="";
 			if($name=="")
 			{
@@ -124,7 +122,7 @@
 			}
 			else
 			{
-				pg_query($conn, "UPDATE Category set cat_name = '$name', cat_des ='$des' where cat_id = '$id'");
+				pg_query($conn, "UPDATE Category set cat_name = '$name' where cat_id = '$id'");
 				echo '<meta http-equiv="refresh" content="0;URL =?page=cat"/>';
 			}
 		}
