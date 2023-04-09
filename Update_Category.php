@@ -96,13 +96,6 @@
 							</div>
 					</div>
                     
-                    <div class="form-group">
-						    <label for="txtMoTa" class="col-sm-2 control-label">Description(*):  </label>
-							<div class="col-sm-10">
-								  <input type="text" name="txtDes" id="txtDes" class="form-control" placeholder="Description" 
-								  value='<?php echo $row['cat_des']?>'>
-							</div>
-					</div>
                     
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">

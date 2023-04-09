@@ -80,7 +80,6 @@
                 <tr>
                     <th><strong>No.</strong></th>
                     <th><strong>Category Name</strong></th>
-                     <th><strong>Description</strong></th>
                     <th><strong>Edit</strong></th>
                     <th><strong>Delete</strong></th>
                 </tr>
