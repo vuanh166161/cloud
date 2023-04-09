@@ -132,7 +132,7 @@
 			echo "<br>";
 			// if($pic['type']=="image/jpg"||$pic['type']=="image/jpeg"||$pic['type']=="image/png" ||$pic['type']=="image/gif"){
 				// if($pic['size']<=614400){
-					$sq="SELECT * from product where product_id='$id'";
+					$sq="SELECT * from product where product_id='$id'";//==> cho nay sai 
                     $result= pg_query($conn,$sq);
                     echo pg_num_rows($result);
 					if(pg_num_rows($result)==0)
@@ -141,7 +141,7 @@
 						$filePic =$pic['name'];
 						$sqlstring="INSERT INTO product(
 							product_id, product_name, price, smalldesc, detaildesc, prodate, pro_qty, pro_image, cat_id, shop_id,supplierid)
-							VALUES('$id','$proname', $price,'$short','$detail','".date('Y-m-d H:i:s')."',$qty,'$filePic','$category', '$shoplist','$supplierlist')";
+							VALUES('$id','$proname', $price,'$short','$detail','".date('Y-m-d H:i:s')."',$qty,'$filePic','$category', $shoplist,$supplierlist)";
 							
 						$re = pg_query($conn, $sqlstring);
 							if(!$re){
