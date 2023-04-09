@@ -58,13 +58,13 @@
 	<h2>Adding shop</h2>
 			 	<form id="form1" name="form1" method="post" action="" class="form-horizontal" role="form">
 				 <div class="form-group">
-						    <label for="txtTen" class="col-sm-2 control-label">Shop ID(*):  </label>
+						    <label for="txtID" class="col-sm-2 control-label">Shop ID(*):  </label>
 							<div class="col-sm-10">
 							      <input type="text" name="txtID" id="txtID" class="form-control" placeholder="shop ID" value='<?php echo isset($_POST["txtID"])?($_POST["txtID"]):"";?>'>
 							</div>
 					</div>	
 				 <div class="form-group">
-						    <label for="txtTen" class="col-sm-2 control-label">Shop Name(*):  </label>
+						    <label for="txName" class="col-sm-2 control-label">Shop Name(*):  </label>
 							<div class="col-sm-10">
 							      <input type="text" name="txtName" id="txtName" class="form-control" placeholder="shop Name" value='<?php echo isset($_POST["txtName"])?($_POST["txtName"]):"";?>'>
 							</div>

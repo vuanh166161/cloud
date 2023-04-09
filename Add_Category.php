@@ -72,7 +72,6 @@
 		{
 			$id = $_POST['txtID'];
 			$name = $_POST['txtName'];
-			$des = $_POST['txtDes'];
 			$err = "";
 			if($id=="")
 			{
@@ -92,7 +91,7 @@
 				$result = pg_query($conn, $sql);
 				if(pg_num_rows($result)=="0")
 				{
-					pg_query($conn, "insert into category (cat_id, cat_name, cat_des) values ('$id', '$name','$des')");
+					pg_query($conn, "insert into category (cat_id, cat_name) values ('$id', '$name')");
 					echo '<meta http-equiv="refresh" content="0;URL =?page=cat"';
 				}
 				else
@@ -107,22 +106,15 @@
 	<h2>Adding Category</h2>
 			 	<form id="form1" name="form1" method="post" action="" class="form-horizontal" role="form">
 				 <div class="form-group">
-						    <label for="txtTen" class="col-sm-2 control-label">Category ID(*):  </label>
+						    <label for="txtID" class="col-sm-2 control-label">Category ID(*):  </label>
 							<div class="col-sm-10">
 							      <input type="text" name="txtID" id="txtID" class="form-control" placeholder="Category ID" value='<?php echo isset($_POST["txtID"])?($_POST["txtID"]):"";?>'>
 							</div>
 					</div>	
 				 <div class="form-group">
-						    <label for="txtTen" class="col-sm-2 control-label">Category Name(*):  </label>
+						    <label for="txtName" class="col-sm-2 control-label">Category Name(*):  </label>
 							<div class="col-sm-10">
 							      <input type="text" name="txtName" id="txtName" class="form-control" placeholder="Category Name" value='<?php echo isset($_POST["txtName"])?($_POST["txtName"]):"";?>'>
-							</div>
-					</div>
-                    
-                    <div class="form-group">
-						    <label for="txtMoTa" class="col-sm-2 control-label">Description(*):  </label>
-							<div class="col-sm-10">
-							      <input type="text" name="txtDes" id="txtDes" class="form-control" placeholder="Description" value='<?php echo isset($_POST["txtDes"])?($_POST["txtDes"]):"";?>'>
 							</div>
 					</div>
                     
