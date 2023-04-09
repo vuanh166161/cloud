@@ -415,8 +415,8 @@ include_once("connection.php");
                         </div>
                         <ul>
                             <li>Address: 311, Ninh Kieu, Can Tho, Vietnam</li>
-                            <li>Phone: 0868239498</li>
-                            <li>tuanhqgcc200311@fpt.edu.vn</li>
+                            <li>Phone: 0977013894</li>
+                            <li>vuanh123@gmail.com</li>
                         </ul>
                     </div>
                 </div>
@@ -461,7 +461,6 @@ include_once("connection.php");
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer__copyright">
-                        <div class="footer__copyright__text"> Huynh Quoc Tuan</div>
                         <div class="footer__copyright__payment"><img src="img/payment-item.png" alt=""></div>
                     </div>
                 </div>
