@@ -26,21 +26,21 @@
 			$id = $_GET['id'];
 			$result = pg_query($conn, "SELECT * from supplier where supplierid = '$id'");
 			$row = pg_fetch_array($result, NULL, PGSQL_ASSOC);
-			$supplierid = $row['supplierid'];
-			$suppliername = $row['suppliername'];
+			$supplier_id = $row['supplierid'];
+			$supplierp_name = $row['suppliername'];
 	?>
 <div class="container">
-	<h2>Updating supplier</h2>
+	<h2>Updating Supplier</h2>
 			 	<form id="form1" name="form1" method="post" action="" class="form-horizontal" role="form">
 				 <div class="form-group">
-						    <label for="txtID" class="col-sm-2 control-label">Supplier ID(*):  </label>
+						    <label for="txtTen" class="col-sm-2 control-label">supplier ID(*):  </label>
 							<div class="col-sm-10">
 								  <input type="text" name="txtID" id="txtID" class="form-control" placeholder="supplier ID" readonly 
 								  value='<?php echo $row['supplierid'] ?>'>
 							</div>
 					</div>	
 				 <div class="form-group">
-						    <label for="txtName" class="col-sm-2 control-label">Supplier Name(*):  </label>
+						    <label for="txtTen" class="col-sm-2 control-label">supplier Name(*):  </label>
 							<div class="col-sm-10">
 								  <input type="text" name="txtName" id="txtName" class="form-control" placeholder="supplier Name" 
 								  value='<?php echo $row['suppliername'] ?>'>
@@ -51,7 +51,7 @@
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
 						      <input style="background-color: #3CC032;"type="submit"  class="site-btn" name="btnUpdate" id="btnUpdate" value="Update"/>
-                              <input type="button" class="site-btn" name="btnIgnore"  id="btnIgnore" value="Ignore" onclick="window.location='?page=shop'" />
+                              <input type="button" class="site-btn" name="btnIgnore"  id="btnIgnore" value="Ignore" onclick="window.location='?page=branch'" />
                               	
 						</div>
 					</div>
