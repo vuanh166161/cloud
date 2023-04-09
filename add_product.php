@@ -131,7 +131,7 @@
 				if($pic['size']<=614400){
 					$sq="SELECT * from product where product_id='$id'or product_name='$proname'";
                     $result= pg_query($conn,$sq);
-                    
+                    echo $result;
 					if(pg_num_rows($result)==0)
 					{
 						copy($pic['tmp_name'],"ATNtoy/".$pic['name']);
@@ -140,7 +140,11 @@
 							product_id, product_name, price, smalldesc, detaildesc, prodate, pro_qty, pro_image, cat_id, shop_id,supplierid)
 							VALUES('$id','$proname', $price,'$short','$detail','".date('Y-m-d H:i:s')."',$qty,'$filePic','$category', '$shoplist','$supplierlist')";
 							
-						pg_query($conn, $sqlstring);
+						$re = pg_query($conn, $sqlstring);
+							if(!$re){
+								echo 'sth wrong';
+								echo pg_last_error($conn);
+							}
 						echo'<li>You have add successfully</li>';
 						
 
