@@ -200,8 +200,7 @@
 
 				<div class="form-group">   
                     <label for="lbShop" class="col-sm-2 control-label">Shop(*):  </label>
-							<div class="col-sm-10">
-                            
+							<div class="col-sm-10">  
 							      <?php bind_shop_List($conn); ?>
 							</div>
                 </div> 
@@ -209,7 +208,6 @@
 				<div class="form-group">   
                     <label for="lbSupplier" class="col-sm-2 control-label">Supplier(*):  </label>
 							<div class="col-sm-10">
-                            
 							      <?php bind_Supplier_List($conn); ?>
 							</div>
                 </div> 
