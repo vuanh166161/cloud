@@ -146,10 +146,12 @@
 							
 						$re = pg_query($conn, $sqlstring);
 							if(!$re){
-								echo 'sth wrong';
+								echo'<li>Failed</li>';
 								echo pg_last_error($conn);
+							}else{
+								echo'<li>You have add successfully</li>';
 							}
-						echo'<li>You have add successfully</li>';
+						
 						
 
 					}	

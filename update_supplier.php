@@ -24,26 +24,26 @@
 		if(isset($_GET["id"]))
 		{
 			$id = $_GET['id'];
-			$result = pg_query($conn, "SELECT * from shop where shop_id = '$id'");
+			$result = pg_query($conn, "SELECT * from supplier where supplierid = '$id'");
 			$row = pg_fetch_array($result, NULL, PGSQL_ASSOC);
-			$shop_id = $row['shop_id'];
-			$shop_name = $row['shop_name'];
+			$supplierid = $row['supplierid'];
+			$suppliername = $row['suppliername'];
 	?>
 <div class="container">
-	<h2>Updating Product shop</h2>
+	<h2>Updating supplier</h2>
 			 	<form id="form1" name="form1" method="post" action="" class="form-horizontal" role="form">
 				 <div class="form-group">
-						    <label for="txtTen" class="col-sm-2 control-label">shopID(*):  </label>
+						    <label for="txtID" class="col-sm-2 control-label">Supplier ID(*):  </label>
 							<div class="col-sm-10">
-								  <input type="text" name="txtID" id="txtID" class="form-control" placeholder="shop ID" readonly 
-								  value='<?php echo $row['shop_id'] ?>'>
+								  <input type="text" name="txtID" id="txtID" class="form-control" placeholder="supplier ID" readonly 
+								  value='<?php echo $row['supplierid'] ?>'>
 							</div>
 					</div>	
 				 <div class="form-group">
-						    <label for="txtTen" class="col-sm-2 control-label">shop Name(*):  </label>
+						    <label for="txtName" class="col-sm-2 control-label">Supplier Name(*):  </label>
 							<div class="col-sm-10">
-								  <input type="text" name="txtName" id="txtName" class="form-control" placeholder="shop Name" 
-								  value='<?php echo $row['shop_name'] ?>'>
+								  <input type="text" name="txtName" id="txtName" class="form-control" placeholder="supplier Name" 
+								  value='<?php echo $row['suppliername'] ?>'>
 							</div>
 					</div>
                     
@@ -74,7 +74,7 @@
 			}
 			else
 			{
-				pg_query($conn, "UPDATE shop set shop_name = '$name' where shop_id = '$id'");
+				pg_query($conn, "UPDATE supplier set suppliername = '$name' where supplierid = '$id'");
 				echo '<meta http-equiv="refresh" content="0;URL =?page=shop"/>';
 			}
 		}
