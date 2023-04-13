@@ -9,10 +9,9 @@
                             <span>All departments</span>
                         </div>
                         <ul>
-                            <li><a href="#">One Piece</a></li>
-                            <li><a href="#">CTokyo Revenger</a></li>
-                            
-                            <li><a href="#">Attack on Titan</a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
                             
                         </ul>
                     </div>
