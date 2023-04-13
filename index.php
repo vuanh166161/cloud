@@ -95,7 +95,7 @@ include_once("connection.php");
                 <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
                         
-                        <li><a href="?page=shopping-cart">Shoping Cart</a></li>
+
                         <li><a href="?page=checkout">Check Out</a></li>
                         
                     </ul>
